@@ -110,15 +110,15 @@ public class PollView extends CustomComponent implements Display {
 	}
 
 	private void bindFieldGroup() {
+				
 		fieldGroup =  new FieldGroup();
-		
-		fieldGroup.bind(txTitle, Poll.Property.title);
-		fieldGroup.bind(taDescription, Poll.Property.description);
+		fieldGroup.bind(txTitle, Poll.PROPERTY_TITLE);
+		fieldGroup.bind(taDescription, Poll.PROPERTY_DESCRIPTION);
 	}
 	
 	@Override
 	public void showPoll(Poll poll) {
-		BeanItem<Poll> beanItem = new BeanItem<Poll>(poll);
+		BeanItem<Poll> beanItem = new BeanItem<Poll>(poll, Poll.PROPERTIES);
 		fieldGroup.setItemDataSource(beanItem);
 	}
 	

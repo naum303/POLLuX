@@ -4,8 +4,11 @@ import de.mn.vaf.entities.BaseEntity;
 
 public class Poll extends BaseEntity {
 
-	public enum Property {
-		title, description
+	public static final String PROPERTY_TITLE = "title";
+	public static final String PROPERTY_DESCRIPTION = "description";
+	public static final String[] PROPERTIES = new String[] {PROPERTY_TITLE, PROPERTY_DESCRIPTION};
+	
+	public Poll() {
 	}
 	
 	private String title;
